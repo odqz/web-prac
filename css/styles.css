@@ -38,6 +38,7 @@ h6 { font-size: 1.125rem; }
   border: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: 'Open Sans';
 }
 
 section {
@@ -94,14 +95,81 @@ section {
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  background-image: url('../img/hero/hero-2.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6)), url('../img/hero/hero-2.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* About styles */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  max-width: 50%;
+}
 
+.home-quote-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-quote-container > div {
+  background-color: var(--accent-color);
+  width: 40px;
+  height: 2px;
+}
+
+.home-quote-container {
+  color: var(--accent-color);
+}
+
+.home-title {
+  color: var(--white-color);
+  font-size: 5rem;
+  text-align: center;
+}
+
+.home-description-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-description {
+  text-align: center;
+  max-width: 75%;
+  color: var(--white-color);
+}
+
+#view-portfolio-btn {
+  margin-top: 1rem;
+  background: transparent;
+  border: 3px solid var(--accent-color);
+  padding: 0.7rem 2rem;
+  color: var(--white-color);
+}
+
+#view-portfolio-btn:hover {
+  background-color: var(--accent-color);
+}
+
+/* About styles */
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-dark);
+  background-image: radial-gradient(at bottom left, var(--accent-color) 0%, transparent 70%);
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Portfolio styles */
 
