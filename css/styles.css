@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: 'Open Sans';
-  src: url('../path/to/file/OpenSans-Italic-VariableFont_wdth,wght.ttf') format('truetype-variations');
+  src: url('../fonts/open-sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf') format('truetype-variations');
   font-weight: 300 800;
   font-stretch: 75% 100%;
   font-style: italic;
@@ -39,6 +39,7 @@ h6 { font-size: 1.125rem; }
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: 'Open Sans';
+  color: var(--white-color);
 }
 
 section {
@@ -106,42 +107,35 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 4px;
-  max-width: 50%;
+  gap: 8px;
+  max-width: 1200px;
 }
 
 .home-quote-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+  color: var(--accent-color);
 }
 
 .home-quote-container > div {
-  background-color: var(--accent-color);
   width: 40px;
   height: 2px;
-}
-
-.home-quote-container {
-  color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 .home-title {
   color: var(--white-color);
-  font-size: 5rem;
   text-align: center;
-}
-
-.home-description-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 7rem;
+  font-weight: 700;
 }
 
 .home-description {
   text-align: center;
-  max-width: 75%;
   color: var(--white-color);
+  max-width: 820px;
 }
 
 #view-portfolio-btn {
@@ -150,6 +144,8 @@ section {
   border: 3px solid var(--accent-color);
   padding: 0.7rem 2rem;
   color: var(--white-color);
+  font-size: 1.25rem;
+  text-decoration: none;
 }
 
 #view-portfolio-btn:hover {
@@ -162,13 +158,63 @@ section {
   justify-content: center;
   align-items: center;
   background-color: var(--secondary-dark);
-  background-image: radial-gradient(at bottom left, var(--accent-color) 0%, transparent 70%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6)), radial-gradient(at bottom left, var(--accent-color) 0%, transparent 70%);
 }
 
 .about-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 8px;
+  padding: 100px 0px;
+  max-width: 1200px;
+}
+
+.about-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}
+
+.about-info-intro {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--accent-color);
+}
+
+.about-info-intro > p {
+  color: var(--accent-color);
+}
+
+.about-info-intro > div {
+  width: 60px;
+  height: 2px;
+  background-color: var(--accent-color);
+}
+
+.about-info-container > img {
+  margin: 24px 0px;
+}
+
+.socials-container {
+  display: flex;
+  gap: 16px;
+}
+
+.socials-container > a {
+  text-decoration: none;
+}
+
+.socials-container > a > i {
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  padding: 16px;
+  font-size: 1.25rem;
+}
+
+.socials-container > a > i:hover {
+  background-color: var(--accent-color);
 }
 
 /* Portfolio styles */
