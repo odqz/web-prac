@@ -116,13 +116,16 @@ section {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  color: var(--accent-color);
 }
 
 .home-quote-container > div {
   width: 40px;
   height: 2px;
   background-color: var(--accent-color);
+}
+
+.home-quote {
+  color: var(--accent-color);
 }
 
 .home-title {
@@ -176,18 +179,18 @@ section {
   gap: 20px
 }
 
-.about-info-intro {
+.about-info-intro, .contact-info-intro {
   display: flex;
   align-items: center;
   gap: 12px;
   color: var(--accent-color);
 }
 
-.about-info-intro > p {
+.about-info-intro > p, .contact-info-intro > p {
   color: var(--accent-color);
 }
 
-.about-info-intro > div {
+.about-info-intro > div, .contact-info-intro > div {
   width: 60px;
   height: 2px;
   background-color: var(--accent-color);
@@ -198,6 +201,7 @@ section {
 }
 
 .socials-container {
+  width: fit-content;
   display: flex;
   gap: 16px;
 }
@@ -210,7 +214,7 @@ section {
   border: 2px solid var(--accent-color);
   border-radius: 50%;
   padding: 16px;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 .socials-container > a > i:hover {
@@ -221,10 +225,47 @@ section {
 
 
 /* Customers styles */
+#customers {
+  display: flex;
+  justify-content: center;
+  background-color: var(--secondary-dark);
+}
 
+.customers-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 60px 0px;
+}
+
+.customers-container > img {
+  height: 80px;
+}
 
 /* Contact styles */
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-bg);
+  padding: 4rem 1rem;
+}
 
+.contact-container {
+  display: flex;
+  max-width: 1200px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 50%;
+}
+
+.contact-info {
+  width: 50%;
+}
 
 /* Newsletter styles */
 
