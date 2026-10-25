@@ -236,6 +236,7 @@ section {
   display: flex;
   justify-content: space-evenly;
   padding: 60px 0px;
+  overflow: hidden;
 }
 
 .customers-container > img {
@@ -253,21 +254,82 @@ section {
 
 .contact-container {
   display: flex;
+  gap: 80px;
   max-width: 1200px;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
   width: 50%;
+}
+
+.contact-form > *:not(button) {
+  background-color: var(--secondary-dark);
+  padding: 16px;
+  border-radius: 4px;
+  resize: none;
+  outline: none;
+  color: var(--gray-color);
+}
+
+.contact-form > button {
+  padding: 12px;
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  font-weight: bold;
+}
+
+.contact-form > button:hover {
+  background-color: var(--accent-color);
 }
 
 .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   width: 50%;
 }
 
-/* Newsletter styles */
+.contact-info > p {
+  color: var(--gray-color);
+}
 
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-method > i {
+  color: var(--accent-color);
+}
+
+.contact-method-title {
+  color: var(--accent-color);
+}
+
+.contact-method-link {
+  text-decoration: none;
+}
+
+/* Newsletter styles */
+#newsletter {
+  background: linear-gradient(rgba(0, 0, 0, 0.8)), url('../img/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.newsletter-container {
+  max-width: 1200px;
+}
 
 /* Footer styles */
