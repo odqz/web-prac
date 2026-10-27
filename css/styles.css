@@ -46,6 +46,13 @@ section {
   width: 100%;
 }
 
+.portfolio-all.hidden, 
+.portfolio-fashion.hidden, 
+.portfolio-landscape.hidden,
+.portfolio-photography {
+  display: none;
+}
+
 /* Navbar styles */
 #navbar {
   display: flex;
@@ -180,18 +187,18 @@ section {
   gap: 20px
 }
 
-.about-info-intro, .contact-info-intro {
+.about-info-intro, .contact-info-intro, .portfolio-intro {
   display: flex;
   align-items: center;
   gap: 12px;
   color: var(--accent-color);
 }
 
-.about-info-intro > p, .contact-info-intro > p {
+.about-info-intro > p, .contact-info-intro > p, .portfolio-intro > p {
   color: var(--accent-color);
 }
 
-.about-info-intro > div, .contact-info-intro > div {
+.about-info-intro > div, .contact-info-intro > div, .portfolio-intro > div {
   width: 60px;
   height: 2px;
   background-color: var(--accent-color);
@@ -235,23 +242,54 @@ section {
   max-width: 1200px;
   display: flex;
   flex-direction: column;
+  gap: 16px;
 }
 
-.portfolio-images {
+.portfolio-types {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
 }
 
-.portfolio-landscape, .portfolio-portrait, .portfolio-fashion {
+.portfolio-types > button {
+  background: transparent;
+  font-size: 16px;
+  border-bottom: 2px solid transparent;
+  padding: 4px;
+}
+
+.portfolio-types > button:hover {
+  border-bottom: 2px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.portfolio-all, .portfolio-fashion, .portfolio-landscape, .portfolio-photography {
   display: grid;
   grid-template-columns: auto auto auto;
-  /* background-color: var(--accent-color); */
+  gap: 8px;
 }
 
-.portfolio-landscape > div > img, .portfolio-portrait > div > img, .portfolio-fashion > div > img {
+.portfolio-image {
+  height: 267px;
+  overflow: hidden;
+}
+
+.portfolio-image > img {
   width: 100%;
-  /* height: ; */
   overflow: scroll;
+}
+
+#view-more-btn {
+  width: fit-content;
+  padding: 8px 20px;
+  background: transparent;
+  align-self: center;
+  border: 2px solid var(--accent-color);
+}
+
+#view-more-btn:hover {
+  background-color: var(--accent-color);
 }
 
 /* Customers styles */
@@ -436,6 +474,6 @@ section {
   color: var(--accent-color);
 }
 
-#footer > p, #footer > p > span{
+#footer > p, #footer > p > span {
   color: var(--gray-color);
 }
